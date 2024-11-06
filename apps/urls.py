@@ -4,5 +4,6 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 
 # app_name = "apps"
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("index", views.index, name="index"),
+    path("schedule/", views.schedule, name="schedule"),
 ] + debug_toolbar_urls()
