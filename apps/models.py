@@ -7,6 +7,9 @@ from django.contrib import admin
 class Event(models.Model):
     event_name = models.CharField(max_length=5)
 
+    def __str__(self):
+        return self.event_name
+
 
 class Date(models.Model):
     date = models.DateField()

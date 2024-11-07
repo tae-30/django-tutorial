@@ -1,16 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <!--<meta charset="UTF-8"> -->
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <link rel="stylesheet" href="{% static 'apps/style.css' %}">
     <title>イベント</title>
 </head>
 
 <body>
+    <h1>スケジュール調整アプリ</h1>
     <form action="{% url 'schedule' %}" method="POST">
         <input type="text">
         {% csrf_token %}
+
+        <button>作成する</button>
 </body>
 
 </html>
